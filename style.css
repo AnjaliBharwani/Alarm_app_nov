@@ -1,0 +1,92 @@
+body {
+  background-color: #1d1d23;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main,
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#active-timers-container {
+  display: grid;
+  gap: 20px;
+}
+.timer-card {
+  display: flex;
+  background-color: #34344a;
+  padding: 20px 30px;
+  width: 450px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+h3 {
+  font-size: 36px;
+}
+/* changing the styles of input elements */
+input[type="number"] {
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  width: 45px;
+  height: 24px;
+  border: none;
+  text-decoration-line: underline;
+  margin: 0px 10px;
+}
+input[type="number"]:focus {
+  outline: none;
+}
+input[type="number"]::placeholder {
+  color: white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* sb set button*/
+#set-btn,
+.btn {
+  background-color: rgba(255, 255, 0, 0.9);
+  padding: 7px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+/* current timer divider */
+#current-timers {
+  background-color: #39393e;
+  padding: 10px 50px;
+  border-radius: 50px;
+}
+/* Time up */
+.time-up {
+  background-color: #ebeb07;
+  color: #34344a;
+  font-weight: 600;
+}
+.time-up > span:nth-child(2) {
+  font-size: 25px;
+}
+.delete-btn {
+  background-color: #34344a;
+  color: #ebeb07;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+    h3{
+        scale: 0.65;
+        margin-bottom: -1px;
+    }
+    #current-timers{
+        scale: 0.9;
+        margin-top: -0.2px;
+    }
+    .timer-card{
+        scale: 0.65;
+    }
+}

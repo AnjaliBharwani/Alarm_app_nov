@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="shortcut icon" href="./Assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- starting screen -->
+        <h3>Multiple Timers App</h3>
+        <div id="timer-card" class="timer-card">
+            <!-- Active timers -->
+            <span>Set Time :</span>
+            <span id="timer-container">
+                <input id="hour" type="number" min="0" max="24" placeholder="hh"><span>:</span>
+                <input id="minute" type="number" min="0" max="60" placeholder="mm"><span>:</span>
+                <input id="seconds" type="number" min="0" max="60" placeholder="ss">
+            </span>
+            <button id="set-btn">Set</button>
+        </div>
+        <!-- dynamically created -->
+        <section>
+            <h4 id="current-timers">Current Timers</h4>
+            <div id="active-timers-container">
+                <span id="no-timers-display-msg">You have no timers currently!</span>
+            </div>
+        </section>
+        <audio id="audio-file">
+            <source src="./Assets/audio.mp3" />
+        </audio>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
